@@ -1,0 +1,34 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "A restaurant landing page made for the odin project using DOM Manipulation in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonHarbers/Odin-Restaurant-Page.git"
+  },
+  "keywords": [
+    "odin",
+    "restaurant",
+    "landing",
+    "page",
+    "dom",
+    "manipulation"
+  ],
+  "author": "Anton Harbers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AntonHarbers/Odin-Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/AntonHarbers/Odin-Restaurant-Page#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
