@@ -4,7 +4,7 @@ import Resto1 from './images/resto1.jpg'
 export default function LoadAbout(){
 
     const headline = document.createElement('div');
-    headline.textContent = 'About Us!';
+    headline.textContent = 'About Us';
     headline.classList.add('headline');
     const img = new Image();
     img.src = Resto1;

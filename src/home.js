@@ -5,7 +5,7 @@ import {content} from './index.js';
 export default function LoadHome(){
 
     const headline = document.createElement('div');
-    headline.textContent = 'Vegan Restaurant!';
+    headline.textContent = 'Vegan Tasties';
     headline.classList.add('headline');
     const img = new Image();
     img.src = Resto1;

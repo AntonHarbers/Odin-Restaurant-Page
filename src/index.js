@@ -4,6 +4,7 @@ import LoadMenu from "./menu.js";
 import './style.css';
 
 const content = document.getElementById('content');
+const body = document.querySelector('body');
 
 const ClearPage = () => {
     content.innerHTML = "";
@@ -12,7 +13,7 @@ const ClearPage = () => {
 const CreateNavBar = () => {
     const navbar = document.createElement('nav');
 
-    content.appendChild(navbar);
+    body.prepend(navbar);
 
     const homeButton = document.createElement('button');
     homeButton.textContent = "Home";
@@ -33,21 +34,19 @@ const CreateNavBar = () => {
 
 const OnHomeBtnClick = () => {
     ClearPage();
-    CreateNavBar();
     LoadHome();
 }
 const OnMenuBtnClick = () => {
     ClearPage();
-    CreateNavBar();
     LoadMenu();
 }
 const OnAboutBtnClick = () => {
     ClearPage();
-    CreateNavBar();
     LoadAbout();
 }
 
 CreateNavBar();
+
 LoadHome();
 
 
