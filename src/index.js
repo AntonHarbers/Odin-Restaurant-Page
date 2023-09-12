@@ -1,7 +1,7 @@
 import LoadHome from "./home.js";
 import LoadAbout from "./about.js";
 import LoadMenu from "./menu.js";
-import './style.css';
+import './styles/style.css';
 
 const content = document.getElementById('content');
 const body = document.querySelector('body');
