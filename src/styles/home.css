@@ -1,13 +1,12 @@
-
 .copy {
-    font-size: 2rem;
-    margin: 1rem;
-    width: 25rem;
-    animation: fadeIn ease 1s;
-    text-align: center;
-  }
-  
-  .copy::first-letter {
-    font-size: 4rem;
-    font-style: italic;
-  }
+  font-size: 2rem;
+  margin: 1rem;
+  width: 25rem;
+  animation: fadeIn ease 1s;
+  text-align: center;
+}
+
+.copy::first-letter {
+  font-size: 4rem;
+  font-style: italic;
+}
