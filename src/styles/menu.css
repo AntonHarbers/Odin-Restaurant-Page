@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  animation: fadeIn ease 1s;
 }
 
 .menu-item {

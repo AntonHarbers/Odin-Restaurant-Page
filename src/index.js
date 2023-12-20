@@ -1,53 +1,46 @@
-import LoadHome from "./home.js";
-import LoadAbout from "./about.js";
-import LoadMenu from "./menu.js";
+import LoadHome from './home.js';
+import LoadAbout from './about.js';
+import LoadMenu from './menu.js';
 import './styles/style.css';
+import { CreateButton, CreateNav, AppendChildrenToElement } from './helpers.js';
 
+// Variable declarations
 const content = document.getElementById('content');
 const body = document.querySelector('body');
 
-const ClearPage = () => {
-    content.innerHTML = "";
-}
-
+// Navbar rendering
 const CreateNavBar = () => {
-    const navbar = document.createElement('nav');
+  const navbar = CreateNav();
+  AppendChildrenToElement(navbar, [
+    CreateButton('home-button', 'Home', OnHomeBtnClick),
+    CreateButton('menu-button', 'Menu', OnMenuBtnClick),
+    CreateButton('about-button', 'About', OnAboutBtnClick),
+  ]);
+  body.prepend(navbar);
+};
 
-    body.prepend(navbar);
-
-    const homeButton = document.createElement('button');
-    homeButton.textContent = "Home";
-    homeButton.addEventListener('click', () => OnHomeBtnClick());
-
-    const menuButton = document.createElement('button');
-    menuButton.textContent = "Menu";
-    menuButton.addEventListener('click', () => OnMenuBtnClick());
-
-    const aboutButton = document.createElement('button');
-    aboutButton.textContent = "About";
-    aboutButton.addEventListener('click', () => OnAboutBtnClick());
-
-    navbar.appendChild(homeButton);
-    navbar.appendChild(menuButton);
-    navbar.appendChild(aboutButton);
-}
+// Helper functions
+const ClearPage = () => {
+  content.innerHTML = '';
+};
 
 const OnHomeBtnClick = () => {
-    ClearPage();
-    LoadHome();
-}
+  ClearPage();
+  LoadHome();
+};
+
 const OnMenuBtnClick = () => {
-    ClearPage();
-    LoadMenu();
-}
+  ClearPage();
+  LoadMenu();
+};
+
 const OnAboutBtnClick = () => {
-    ClearPage();
-    LoadAbout();
-}
+  ClearPage();
+  LoadAbout();
+};
 
+// Initial page load
 CreateNavBar();
-
 LoadHome();
 
-
-export {content};
+export { content };
